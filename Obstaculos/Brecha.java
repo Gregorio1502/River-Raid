@@ -22,7 +22,6 @@ public class Brecha extends Obstaculos {
         super(Ancho, Altura);
         IniciarComponentes();
         Posicionar();
-
     }
 
     /**

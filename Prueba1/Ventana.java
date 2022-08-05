@@ -162,7 +162,7 @@ public class Ventana extends JFrame {
     }
 
     /**
-     *Clase privada para el Eventos de las teclas
+     * Clase privada para el Eventos de las teclas
      */
     private class Teclas extends KeyAdapter {
 

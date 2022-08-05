@@ -11,16 +11,16 @@ import javax.swing.Timer;
 public abstract class Entidades {
 
     /**
-     *Jlabel para el cuerpo de todos las hijas de esta clase
+     * Jlabel para el cuerpo de todos las hijas de esta clase
      */
     protected JLabel Cuerpo;
     /**
-     *Marca si el objeto esta vivo o no
+     * Marca si el objeto esta vivo o no
      */
     private boolean Vivo;
 
     /**
-     *Atributo que las hijas emplearan 
+     * Atributo que las hijas emplearan
      */
     protected Timer Time;
 
@@ -72,7 +72,8 @@ public abstract class Entidades {
     }
 
     /**
-     *Cada hija tendrá su forma de obtener su imagen, dependiendo del tipo de instancia que esta tenga
+     * Cada hija tendrá su forma de obtener su imagen, dependiendo del tipo de
+     * instancia que esta tenga
      */
     public abstract void SetImg();
 

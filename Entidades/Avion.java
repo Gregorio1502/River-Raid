@@ -9,44 +9,45 @@ import Misc.Imagenes;
 /**
  * 
  * Clase del Cuerpo del Avion asi como varias variables para su funcionamiento
+ * 
  * @author Gregorio y Francisco
  */
 public class Avion extends Movible implements ActionListener {
 
     /**
-     *Contiene la aceleración del jugador
+     * Contiene la aceleración del jugador
      */
     private int Aceleracion;
     /**
-     *Lleva al jugador hacia la derecha
+     * Lleva al jugador hacia la derecha
      */
     private Timer Der = new Timer(10, this);
     /**
-     *Lleva al jugador hacia la izquierda
+     * Lleva al jugador hacia la izquierda
      */
     private Timer Izq = new Timer(10, this);
     /**
-     *Marca si se esta moviendo hacia la derecha
+     * Marca si se esta moviendo hacia la derecha
      */
     private boolean AceDer = false;
     /**
-     *Marca si se esta moviendo hacia la izquierda
+     * Marca si se esta moviendo hacia la izquierda
      */
     private boolean AceIzq = false;
     /**
-     *Marca si se disparo
+     * Marca si se disparo
      */
     private boolean Disparar = false;
     /**
-     *Contador de Vidas
+     * Contador de Vidas
      */
     private int Vidas;
     private double Fuel;
     private int N = 0;
 
     /**
-     *  @param Ancho
-     *  @param Alto
+     * @param Ancho
+     * @param Alto
      */
     public Avion(int Ancho, int Alto) {
         super(true, Ancho, Alto);
@@ -82,9 +83,6 @@ public class Avion extends Movible implements ActionListener {
         Cuerpo.setIcon(Imagenes.getImg()[Imagenes.ImgAvion]);
         Cuerpo.setSize(Imagenes.getImg()[Imagenes.ImgAvion].getIconWidth(),
                 Imagenes.getImg()[Imagenes.ImgAvion].getIconHeight());
-        // Cuerpo.setSize(10, 30);
-        // Cuerpo.setOpaque(true);
-        // Cuerpo.setBackground(Color.red);
     }
 
     /**
@@ -104,7 +102,7 @@ public class Avion extends Movible implements ActionListener {
     }
 
     /**
-     * Posiciona el avion en el centro de la ventana y en su posición de juego 
+     * Posiciona el avion en el centro de la ventana y en su posición de juego
      */
     public void Posicionar() {
         Cuerpo.setLocation((int) (Ancho / 2 - Cuerpo.getWidth() * 0.5), 300);

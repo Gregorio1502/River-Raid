@@ -6,7 +6,8 @@ import java.awt.event.*;
 import javax.swing.Timer;
 
 /**
- * Objeto que al pasar sobre el rellenara el combustible del avion 
+ * Objeto que al pasar sobre el rellenara el combustible del avion
+ * 
  * @author Gregorio y Francisco
  */
 public class Fuel extends Entidades {

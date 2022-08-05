@@ -15,12 +15,12 @@ import javax.swing.Timer;
 public abstract class Movible extends Entidades {
 
     /**
-     *Contiene la cantidad de movimiento
+     * Contiene la cantidad de movimiento
      */
     protected float Velocidad;
 
     /**
-     *Ancho del mapa, permitirá cambiar de dirección 
+     * Ancho del mapa, permitirá cambiar de dirección
      */
     protected int Ancho,
             /**
@@ -29,17 +29,17 @@ public abstract class Movible extends Entidades {
             Alto;
 
     /**
-     *Marca hacia donde se mueve el objeto
+     * Marca hacia donde se mueve el objeto
      */
     protected String Direccion;
 
     /**
-     *Dice si el objeto se mueve o no
+     * Dice si el objeto se mueve o no
      */
     protected boolean Moverse;
 
     /**
-     *Dice si el objeto ya escogió dirección 
+     * Dice si el objeto ya escogió dirección
      */
     protected boolean EscogerDir = false;
     /**
@@ -48,7 +48,7 @@ public abstract class Movible extends Entidades {
     private int N = 0;
 
     /**
-     *
+     * Clase por defecto por si el objeto no se moverá
      */
     public Movible() {
         super();
@@ -56,8 +56,8 @@ public abstract class Movible extends Entidades {
 
     /**
      * @param Moverse boolean para saber si se esta moviendo
-     * @param Ancho
-     * @param Alto
+     * @param Ancho   Ancho del Mapa con el que va a interactuar
+     * @param Alto    Alto del Mapa
      */
     public Movible(boolean Moverse, int Ancho, int Alto) {
         super();
@@ -68,7 +68,7 @@ public abstract class Movible extends Entidades {
     }
 
     /**
-     * Funcion para cambiar la dirrecion de los enemigos
+     * Funcion para cambiar la dirección de los enemigos
      */
     public void CambiarDireccion() {
         if (EscogerDir) {

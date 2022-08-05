@@ -7,44 +7,46 @@ import Obstaculos.Obstaculos;
 import Obstaculos.Puente;
 
 /**
- * Clase abstracta con las bases en donde se agregan los objetos que conforman el juego
+ * Clase abstracta con las bases en donde se agregan los objetos que conforman
+ * el juego
  *
  * @author Gregorio y Francisco
  */
 public abstract class Escenarios extends JPanel {
 
     /**
-     *Vector de Objetos movibles que serán Enemigos
+     * Vector de Objetos movibles que serán Enemigos
      */
     protected Movible Enemigos[];
 
     /**
-     *Vector de Combustibles
+     * Vector de Combustibles
      */
     protected Fuel Fuels[];
 
     /**
-     *Vector de obstaculos
+     * Vector de obstaculos
      */
     protected Obstaculos Obstaculos[];
 
     /**
-     *Puente para el final del mapa
+     * Puente para el final del mapa
      */
     protected Puente polly;
 
     /**
-     *Atributo que ayudara a diversificar mapas
+     * Atributo que ayudara a diversificar mapas
      */
     protected Random Rd = new Random();
 
     /**
      * Constructor de la clase
-     * @param Ancho Ancho del mapa
-     * @param Largo Largo del mapa
+     * 
+     * @param Ancho       Ancho del mapa
+     * @param Largo       Largo del mapa
      * @param NumEnemigos Numero de enemigos
-     * @param NumFuels Numero de Combustibles
-     * @param Obstaculos Numero de Obstaculos
+     * @param NumFuels    Numero de Combustibles
+     * @param Obstaculos  Numero de Obstaculos
      */
     public Escenarios(int Ancho, int Largo, int NumEnemigos, int NumFuels, int Obstaculos) {
         setOpaque(false);

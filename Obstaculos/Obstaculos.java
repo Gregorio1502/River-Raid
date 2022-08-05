@@ -56,7 +56,7 @@ public abstract class Obstaculos {
     public abstract void IniciarComponentes();
 
     /**
-     * Método abstracto que Posicionara los JLabels 
+     * Método abstracto que Posicionara los JLabels
      */
     public abstract void Posicionar();
 
@@ -104,7 +104,7 @@ public abstract class Obstaculos {
             }
         }
         if (Tipo == 0) {
-        Wid = Ancho;
+            Wid = Ancho;
         }
         return Wid;
     }

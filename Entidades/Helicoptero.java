@@ -3,14 +3,16 @@ package Entidades;
 import Misc.Imagenes;
 
 /**
- * Clase con las Propiedades y Modelo de uno de losEnemigo del juego, 
+ * Clase con las Propiedades y Modelo de uno de losEnemigo del juego,
  * Se mueve mas rápido que el Barco
+ * 
  * @author Gregorio y Francisco
  */
 public class Helicoptero extends Movible {
 
     /**
-     * Constructor si el Enemigo no se va a mover 
+     * Constructor si el Enemigo no se va a mover
+     * 
      * @param Moverse
      */
     public Helicoptero(boolean Moverse) {
@@ -21,7 +23,8 @@ public class Helicoptero extends Movible {
     }
 
     /**
-     * Constructor De un enemigo que si se va a mover 
+     * Constructor De un enemigo que si se va a mover
+     * 
      * @param Moverse
      * @param Ancho
      * @param Alto

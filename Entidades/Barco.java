@@ -4,13 +4,15 @@ import Misc.Imagenes;
 
 /**
  * Clase con las Propiedades y Modelo de uno de los enemigos
- * este se mueve mas lento que el helicóptero 
+ * este se mueve mas lento que el helicóptero
+ * 
  * @author Gregorio y Francisco
  */
 public class Barco extends Movible {
 
     /**
-     *  Constructor si el Enemigo no se va a mover 
+     * Constructor si el Enemigo no se va a mover
+     * 
      * @param Moverse
      */
     public Barco(boolean Moverse) {
@@ -21,7 +23,8 @@ public class Barco extends Movible {
     }
 
     /**
-     * Constructor De un enemigo que si se va a mover 
+     * Constructor De un enemigo que si se va a mover
+     * 
      * @param Moverse
      * @param Ancho
      * @param Alto
@@ -76,15 +79,13 @@ public class Barco extends Movible {
     public void SetImg() {
         if (Direccion.equals("Der")) {
             Cuerpo.setIcon(Imagenes.getImg()[Imagenes.ImgBarcoDer]);
-            Cuerpo.setSize(Imagenes.getImg()[Imagenes.ImgBarcoDer].getIconWidth(), Imagenes.getImg()[Imagenes.ImgBarcoDer].getIconHeight());
+            Cuerpo.setSize(Imagenes.getImg()[Imagenes.ImgBarcoDer].getIconWidth(),
+                    Imagenes.getImg()[Imagenes.ImgBarcoDer].getIconHeight());
         } else if (Direccion.equals("Izq")) {
             Cuerpo.setIcon(Imagenes.getImg()[Imagenes.ImgBarcoIzq]);
-            Cuerpo.setSize(Imagenes.getImg()[Imagenes.ImgBarcoIzq].getIconWidth(), Imagenes.getImg()[Imagenes.ImgBarcoIzq].getIconHeight());
+            Cuerpo.setSize(Imagenes.getImg()[Imagenes.ImgBarcoIzq].getIconWidth(),
+                    Imagenes.getImg()[Imagenes.ImgBarcoIzq].getIconHeight());
         }
-        //Cuerpo.setOpaque(true);
-        //Cuerpo.setBackground(Color.green);
-        //Cuerpo.setSize(45, 20);
-
     }
 
     /**

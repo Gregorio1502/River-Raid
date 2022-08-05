@@ -21,6 +21,7 @@ import Misc.Sound;
 
 /**
  * Clase central para el juego, Aquí se juntan la gran mayoría de las clases
+ * 
  * @author Gregorio y Francisco
  */
 public class Prueba extends JPanel {
@@ -114,7 +115,7 @@ public class Prueba extends JPanel {
         Jugador.setVidas(2);
 
         Vidas = new JLabel();
-        Vidas.setText(": " + (1+Jugador.getVidas()));
+        Vidas.setText(": " + (1 + Jugador.getVidas()));
 
         Ventana.sound.play(Sound.SoundFondo);
 
@@ -304,7 +305,7 @@ public class Prueba extends JPanel {
                             (int) (Esc.getX() + Esc.getWidth() / 2 - Jugador.getCuerpo().getWidth() * 0.5),
                             300);
                     Jugador.setVidas(Jugador.getVidas() - 1);
-                    Vidas.setText(": " + (1+Jugador.getVidas()));
+                    Vidas.setText(": " + (1 + Jugador.getVidas()));
                     Jugador.getCuerpo().setIcon(Imagenes.getImg()[Imagenes.ImgAvion]);
                     Jugador.setFuel(100);
                     Jugador.setMoverse(true);
@@ -320,7 +321,7 @@ public class Prueba extends JPanel {
 
     /**
      * Genera un nuevo nivel después del actual
-     * o al presionar la tecla P 
+     * o al presionar la tecla P
      */
     public void New_Mapa() {
         if (!TimerMuros.isRunning()) {

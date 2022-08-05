@@ -17,93 +17,92 @@ public class Imagenes {
     private static ImageIcon Exp[];
 
     /**
-     *Imagen de la vida
+     * Imagen de la vida
      */
     public final static int ImgLlaves = 0;
 
     /**
-     *Imagen del combustible 
+     * Imagen del combustible
      */
     public final static int ImgFuel = 1;
 
     /**
-     *Imagen del fondo del menu
+     * Imagen del fondo del menu
      */
     public final static int ImgFondo = 2;
 
     /**
-     *Imagen del Avion
+     * Imagen del Avion
      */
     public final static int ImgAvion = 3;
 
     /**
-     *Imagen del Helicóptero que se mueve a la Derecha
+     * Imagen del Helicóptero que se mueve a la Derecha
      */
     public final static int ImgHelicopteroDer = 4;
 
     /**
-     *Imagen del Helicóptero que se mueve a la Izquierda
+     * Imagen del Helicóptero que se mueve a la Izquierda
      */
     public final static int ImgHelicopteroIzq = 5;
 
     /**
-     *Imagen del Barco que se mueve a la Izquierda
+     * Imagen del Barco que se mueve a la Izquierda
      */
     public final static int ImgBarcoDer = 6;
 
     /**
-     *Imagen del Barco que se mueve a la Izquierda
+     * Imagen del Barco que se mueve a la Izquierda
      */
     public final static int ImgBarcoIzq = 7;
 
     /**
-     *Imagen del combustible
+     * Imagen del combustible
      */
     public final static int ImgFuelR = 8;
 
     /**
-     *Imagen del fondo de agua del juego
+     * Imagen del fondo de agua del juego
      */
     public final static int ImgAgua = 9;
 
     /**
-     *Imagen del lateral izquierdo
+     * Imagen del lateral izquierdo
      */
     public final static int LateralIzq = 10;
 
     /**
-     *Imagen del lateral derecho
+     * Imagen del lateral derecho
      */
     public final static int LateralDer = 11;
 
     /**
-     *Imagen de la parte Destructible del puente
+     * Imagen de la parte Destructible del puente
      */
     public final static int Puente = 12;
 
     /**
-     *Imagen del los laterales del puente 
+     * Imagen del los laterales del puente
      */
     public final static int LateralPuente = 13;
 
-
     /**
-     *Imagen de un tipo de obstáculo
+     * Imagen de un tipo de obstáculo
      */
     public final static int ObsP = 14;
 
     /**
-     *Imagen Para los de obstáculo Grandes
+     * Imagen Para los de obstáculo Grandes
      */
     public final static int SeaStone = 15;
 
     /**
-     *Imagen para el fondo de los indicadores
+     * Imagen para el fondo de los indicadores
      */
     public final static int FondoInd = 16;
 
     /**
-     *Constructor de la Clase
+     * Constructor de la Clase
      */
     public Imagenes() {
         DireccionImg();
@@ -132,7 +131,6 @@ public class Imagenes {
         ImgURL[LateralIzq] = getClass().getResource("/Img/LateralIzq.png");
         ImgURL[LateralDer] = getClass().getResource("/Img/LateralDer.png");
         ImgURL[ObsP] = getClass().getResource("/Img/ObstaculoP.png");
-
     }
 
     /**
@@ -152,6 +150,7 @@ public class Imagenes {
 
     /**
      * Devuelve el vector de imágenes para ser implementado
+     * 
      * @return una imagen
      */
     public static ImageIcon[] getImg() {
@@ -159,7 +158,8 @@ public class Imagenes {
     }
 
     /**
-     * Devuelve el vector de imágenes para ser implementado en las explosiones 
+     * Devuelve el vector de imágenes para ser implementado en las explosiones
+     * 
      * @return una explosion
      */
     public static ImageIcon[] getExp() {

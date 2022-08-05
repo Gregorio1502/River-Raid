@@ -12,7 +12,7 @@ public class Cronometro {
     private String crono;
 
     /**
-     *Constructor de la clase
+     * Constructor de la clase
      */
     public Cronometro() {
         segundo = 0;

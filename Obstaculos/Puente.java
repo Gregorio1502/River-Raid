@@ -122,7 +122,7 @@ public class Puente extends Obstaculos {
 
     /**
      * Función para cambiar el boolean que indica si el puente ha sido destruido
-     * e inicia la animación de destrucción 
+     * e inicia la animación de destrucción
      */
     public void Destruir() {
         Destruido = true;

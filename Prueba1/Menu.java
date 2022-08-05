@@ -115,7 +115,7 @@ public class Menu extends Container {
                     Alto - SubTitulo.getHeight() - Titulo.getHeight());
             Texto.setFont(new Font("", Font.BOLD, 17));
             Texto.setOpaque(true);
-            Texto.setBackground(new Color(255, 255, 255, 120));
+            Texto.setBackground(new Color(255, 255, 255, 150));
             Texto.setVerticalAlignment(SwingConstants.TOP);
 
             String text = "<html><body style=\"margin-left: 20px;\">"
@@ -180,7 +180,7 @@ public class Menu extends Container {
             Texto.setSize(Ancho, Alto - SubTitulo.getHeight() - Titulo.getHeight());
             Texto.setLocation(0, SubTitulo.getY() + SubTitulo.getHeight());
             Texto.setOpaque(true);
-            Texto.setBackground(new Color(255, 255, 255, 100));
+            Texto.setBackground(new Color(255, 255, 255, 150));
 
             Bt[2][0].setSize(150, 40);
             Bt[2][0].setLocation(10, Alto - Bt[2][0].getHeight() - 70);
@@ -296,7 +296,7 @@ public class Menu extends Container {
         Texto.setVerticalAlignment(SwingConstants.TOP);
         Texto.setFont(new Font("", Font.BOLD, 20));
         Texto.setOpaque(true);
-        Texto.setBackground(new Color(255, 255, 255, 100));
+        Texto.setBackground(new Color(255, 255, 255, 150));
 
         Texto.setText("<html><body>"
                 + "<Br><Br>Usuario: " + Nombre + "<Br><Br>"
@@ -338,7 +338,7 @@ public class Menu extends Container {
     }
 
     /**
-     * Cambia la visibilidad a true si no hay ningún usuario escrito 
+     * Cambia la visibilidad a true si no hay ningún usuario escrito
      */
     public void Error() {
         Error.setVisible(true);

@@ -102,7 +102,7 @@ public class MapaT1 extends Escenarios {
                     T = Rd.nextInt(3);
                 }
                 if (T == 0) {
-                    Obstaculos[j] = new Canal(getWidth(), Rd.nextInt(getHeight()), Rd.nextInt(getHeight()/10)+300);
+                    Obstaculos[j] = new Canal(getWidth(), Rd.nextInt(getHeight()), Rd.nextInt(getHeight() / 10) + 300);
                 } else if (T == 1) {
                     Obstaculos[j] = new Brecha(getWidth(), Rd.nextInt(getHeight()));
                 } else if (T == 2) {
@@ -122,21 +122,19 @@ public class MapaT1 extends Escenarios {
                     }
                 }
                 if (!Colision) {
-                    A = new Rectangle(Obstaculos[j].getAnchor()+80, Obstaculos[j].getAlturaT()+100);
+                    A = new Rectangle(Obstaculos[j].getAnchor() + 80, Obstaculos[j].getAlturaT() + 100);
                     if (Obstaculos[j].getTipo() == 2) {
-                        A.setLocation(getWidth() - Obstaculos[j].getAnchor()-40, Obstaculos[j].getPAltura()+50);
+                        A.setLocation(getWidth() - Obstaculos[j].getAnchor() - 40, Obstaculos[j].getPAltura() + 50);
                     } else {
-                        A.setLocation(0, Obstaculos[j].getPAltura()+50);
+                        A.setLocation(0, Obstaculos[j].getPAltura() + 50);
                     }
-                    //A.grow(50, 50);
                     for (int i = 0; i < j && !Colision; i++) {
-                        B = new Rectangle(Obstaculos[i].getAnchor()+80, Obstaculos[i].getAlturaT()+100);
+                        B = new Rectangle(Obstaculos[i].getAnchor() + 80, Obstaculos[i].getAlturaT() + 100);
                         if (Obstaculos[i].getTipo() == 2) {
-                            B.setLocation(getWidth() - Obstaculos[i].getAnchor()-40, Obstaculos[i].getPAltura()+50);
+                            B.setLocation(getWidth() - Obstaculos[i].getAnchor() - 40, Obstaculos[i].getPAltura() + 50);
                         } else {
-                            B.setLocation(0, Obstaculos[i].getPAltura()+50);
+                            B.setLocation(0, Obstaculos[i].getPAltura() + 50);
                         }
-                        //B.grow(50, 50);
                         if (A.intersects(B)) {
                             Colision = true;
                             intento++;

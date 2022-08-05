@@ -4,12 +4,13 @@ import java.awt.*;
 
 /**
  * Clase para el cuerpo y propiedades de la bola
+ * 
  * @author Gregorio y Francisco
  */
 public class Balas extends Movible {
 
     /**
-     *Constructor
+     * Constructor de la clase
      */
     public Balas() {
         SetImg();
