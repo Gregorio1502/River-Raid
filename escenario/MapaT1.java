@@ -2,9 +2,6 @@ package Escenario;
 
 import Entidades.*;
 import Obstaculos.*;
-import java.awt.*;
-
-import javax.swing.JLabel;
 
 /**
  * Clase para implementar los elementos del juego Hereda de Escenarios
