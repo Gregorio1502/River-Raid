@@ -22,6 +22,7 @@ public class Embudo extends Obstaculos {
         super(Ancho, largo);
         IniciarComponentes();
         Posicionar();
+        Tipo = 0;
     }
 
     /**

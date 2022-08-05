@@ -1,5 +1,7 @@
 package Obstaculos;
 
+import java.util.Random;
+
 import javax.swing.JLabel;
 
 /**
@@ -15,6 +17,11 @@ public abstract class Obstaculos {
     protected JLabel Obs[];
 
     /**
+     * Se utiliza para escoger el subtipo de obstáculo que se generara
+     */
+    protected Random Rd;
+
+    /**
      * Limite de que tan ancho puede ser
      */
     protected int Ancho,
@@ -24,6 +31,14 @@ public abstract class Obstaculos {
             Altura;
 
     /**
+     * Dicta que subtipo de obstáculo sera
+     * 0 Posicionamiento Central
+     * 1 Posicionamiento izquierdo
+     * 2 Posicionamiento Derecho
+     */
+    protected int Tipo;
+
+    /**
      * @param Ancho  Limite de que tan ancho puede ser
      * @param Altura EL punto en y a partir de donde se empieza a generar el
      *               obstáculo
@@ -31,6 +46,8 @@ public abstract class Obstaculos {
     public Obstaculos(int Ancho, int Altura) {
         this.Ancho = Ancho;
         this.Altura = Altura;
+        Rd = new Random();
+        Tipo = Rd.nextInt(3);
     }
 
     /**
@@ -51,6 +68,13 @@ public abstract class Obstaculos {
     }
 
     /**
+     * @return El tipo de Obstáculo
+     */
+    public int getTipo() {
+        return Tipo;
+    }
+
+    /**
      * @return la altura baje desde donde se colocaron los JLabels
      */
     public int getPAltura() {
@@ -67,6 +91,22 @@ public abstract class Obstaculos {
             T += Obs[i].getHeight();
         }
         return T;
+    }
+
+    /**
+     * @return el ancho máximo de un obstaculo a partir de su JLabel mas Ancha
+     */
+    public int getAnchor() {
+        int Wid = 0;
+        for (int i = 0; i < Obs.length; i++) {
+            if (Obs[i].getWidth() > Wid) {
+                Wid = Obs[i].getWidth();
+            }
+        }
+        if (Tipo == 0) {
+        Wid = Ancho;
+        }
+        return Wid;
     }
 
     /**

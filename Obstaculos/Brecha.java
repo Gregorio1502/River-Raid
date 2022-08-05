@@ -51,11 +51,44 @@ public class Brecha extends Obstaculos {
      */
     @Override
     public void Posicionar() {
-        for (int i = 0, j = 1; i < Obs.length; i += 2, j++) {
-            Obs[i].setLocation(0, Altura + Obs[i].getHeight() * j);
-            Obs[i + 1].setLocation(Ancho - Obs[i + 1].getWidth(), Altura + Obs[i + 1].getHeight() * j);
+        if (Tipo == 0) {
+            for (int i = 0, j = 1; i < Obs.length; i += 2, j++) {
+                Obs[i].setLocation(0, Altura + Obs[i].getHeight() * j);
+                Obs[i + 1].setLocation(Ancho - Obs[i + 1].getWidth(), Altura + Obs[i + 1].getHeight() * j);
+            }
         }
+        if (Tipo == 1) {
+            int j = 1;
+            for (int i = 0; i < Obs.length; i++) {
+                if (i % 2 == 0) {
+                    Obs[i].setLocation(0, Altura + Obs[i].getHeight() * j);
+                    j++;
+                }
 
+            }
+            for (int k = Obs.length - 1; k > 0; k--) {
+                if (k % 2 != 0) {
+                    Obs[k].setLocation(0, Altura + Obs[k].getHeight() * j);
+                    j++;
+                }
+            }
+        }
+        if (Tipo == 2) {
+            int j = 1;
+            for (int i = 0; i < Obs.length; i++) {
+                if (i % 2 == 0) {
+                    Obs[i].setLocation(Ancho - Obs[i].getWidth(), Altura + Obs[i].getHeight() * j);
+                    j++;
+                }
+
+            }
+            for (int k = Obs.length - 1; k > 0; k--) {
+                if (k % 2 != 0) {
+                    Obs[k].setLocation(Ancho - Obs[k].getWidth(), Altura + Obs[k].getHeight() * j);
+                    j++;
+                }
+            }
+        }
     }
 
     /*
@@ -66,6 +99,10 @@ public class Brecha extends Obstaculos {
      */
     @Override
     public int getAlturaT() {
-        return super.getAlturaT() / 2;
+        if (Tipo == 0) {
+            return super.getAlturaT() / 2;
+        } else {
+            return super.getAlturaT();
+        }
     }
 }

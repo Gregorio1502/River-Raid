@@ -2,6 +2,7 @@ package Escenario;
 
 import Entidades.*;
 import Obstaculos.*;
+import java.awt.*;
 
 /**
  * Clase para implementar los elementos del juego Hereda de Escenarios
@@ -94,6 +95,8 @@ public class MapaT1 extends Escenarios {
             int T = Rd.nextInt(3);
             int Cambio = 10;
             int intento = 0;
+            Rectangle A = null;
+            Rectangle B = null;
             do {
                 if (intento > Cambio) {
                     T = Rd.nextInt(3);
@@ -118,7 +121,28 @@ public class MapaT1 extends Escenarios {
                         }
                     }
                 }
-               
+                if (!Colision) {
+                    A = new Rectangle(Obstaculos[j].getAnchor()+80, Obstaculos[j].getAlturaT()+100);
+                    if (Obstaculos[j].getTipo() == 2) {
+                        A.setLocation(getWidth() - Obstaculos[j].getAnchor()-40, Obstaculos[j].getPAltura()+50);
+                    } else {
+                        A.setLocation(0, Obstaculos[j].getPAltura()+50);
+                    }
+                    //A.grow(50, 50);
+                    for (int i = 0; i < j && !Colision; i++) {
+                        B = new Rectangle(Obstaculos[i].getAnchor()+80, Obstaculos[i].getAlturaT()+100);
+                        if (Obstaculos[i].getTipo() == 2) {
+                            B.setLocation(getWidth() - Obstaculos[i].getAnchor()-40, Obstaculos[i].getPAltura()+50);
+                        } else {
+                            B.setLocation(0, Obstaculos[i].getPAltura()+50);
+                        }
+                        //B.grow(50, 50);
+                        if (A.intersects(B)) {
+                            Colision = true;
+                            intento++;
+                        }
+                    }
+                }
             } while (Colision);
             for (int i = 0; i < Obstaculos[j].getObs().length; i++) {
                 add(Obstaculos[j].getObs()[i]);
