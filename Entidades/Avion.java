@@ -37,6 +37,9 @@ public class Avion extends Movible implements ActionListener {
      *Marca si se disparo
      */
     private boolean Disparar = false;
+    /**
+     *Contador de Vidas
+     */
     private int Vidas;
     private double Fuel;
     private int N = 0;
