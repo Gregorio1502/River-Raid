@@ -4,6 +4,8 @@ import Entidades.*;
 import Obstaculos.*;
 import java.awt.*;
 
+import javax.swing.JLabel;
+
 /**
  * Clase para implementar los elementos del juego Hereda de Escenarios
  *
@@ -95,14 +97,12 @@ public class MapaT1 extends Escenarios {
             int T = Rd.nextInt(3);
             int Cambio = 10;
             int intento = 0;
-            Rectangle A = null;
-            Rectangle B = null;
             do {
                 if (intento > Cambio) {
                     T = Rd.nextInt(3);
                 }
                 if (T == 0) {
-                    Obstaculos[j] = new Canal(getWidth(), Rd.nextInt(getHeight()), 300);
+                    Obstaculos[j] = new Canal(getWidth(), Rd.nextInt(getHeight()), Rd.nextInt(getHeight()/10)+300);
                 } else if (T == 1) {
                     Obstaculos[j] = new Brecha(getWidth(), Rd.nextInt(getHeight()));
                 } else if (T == 2) {
@@ -121,28 +121,7 @@ public class MapaT1 extends Escenarios {
                         }
                     }
                 }
-                if (!Colision) {
-                    A = new Rectangle(Obstaculos[j].getAnchor(), Obstaculos[j].getAlturaT());
-                    if (Obstaculos[j].getTipo() == 2) {
-                        A.setLocation(getWidth() - Obstaculos[j].getAnchor(), Obstaculos[j].getPAltura());
-                    } else {
-                        A.setLocation(0, Obstaculos[j].getPAltura());
-                    }
-                    A.grow(50, 50);
-                    for (int i = 0; i < j && !Colision; i++) {
-                        B = new Rectangle(Obstaculos[i].getAnchor(), Obstaculos[i].getAlturaT());
-                        if (Obstaculos[i].getTipo() == 2) {
-                            A.setLocation(getWidth() - Obstaculos[i].getAnchor(), Obstaculos[i].getPAltura());
-                        } else {
-                            A.setLocation(0, Obstaculos[i].getPAltura());
-                        }
-                        B.grow(50, 50);
-                        if (A.intersects(B)) {
-                            Colision = true;
-                            intento++;
-                        }
-                    }
-                }
+               
             } while (Colision);
             for (int i = 0; i < Obstaculos[j].getObs().length; i++) {
                 add(Obstaculos[j].getObs()[i]);
