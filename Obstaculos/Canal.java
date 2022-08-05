@@ -6,20 +6,23 @@ import Misc.Imagenes;
 
 /**
  * Obstáculo de forma cerrada y alargada
+ * 
  * @author Gregorio y Francisco
  */
 public class Canal extends Obstaculos {
 
     /**
-     *Dicta que tan largo es el JLabel mas Largo
+     * Dicta que tan largo es el JLabel mas Largo
      */
     private int Largo;
 
     /**
      * Constructor de la clase
-     * @param Ancho Limite de que tan ancho puede ser
-     * @param Altura EL punto en y a partir de donde se empieza a generar el obstáculo
-     * @param largo Dicta que tan largo es el JLabel mas Largo
+     * 
+     * @param Ancho  Limite de que tan ancho puede ser
+     * @param Altura EL punto en y a partir de donde se empieza a generar el
+     *               obstáculo
+     * @param largo  Dicta que tan largo es el JLabel mas Largo
      */
     public Canal(int Ancho, int Altura, int largo) {
         super(Ancho, Altura);
@@ -144,6 +147,21 @@ public class Canal extends Obstaculos {
 
                 }
             }
+        }
+    }
+
+    /*
+     * (non-Javadoc)
+     * Sobre escribe la altura total para adaptarse a dos laterales ocupados
+     * 
+     * @see Obstaculos.Obstaculos#getAlturaT()
+     */
+    @Override
+    public int getAlturaT() {
+        if (Tipo == 0) {
+            return super.getAlturaT() / 2;
+        } else {
+            return super.getAlturaT();
         }
     }
 }

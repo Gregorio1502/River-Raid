@@ -5,10 +5,10 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.Timer;
 
+import Escenario.Fuel_Indicador;
 import Misc.Cronometro;
 import Misc.Imagenes;
 import Misc.Sound;
-import escenario.Fuel_Indicador;
 
 import java.awt.*;
 import java.awt.event.*;

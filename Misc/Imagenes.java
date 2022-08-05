@@ -12,7 +12,7 @@ import javax.swing.ImageIcon;
  */
 public class Imagenes {
 
-    private URL ImgURL[] = new URL[19];
+    private URL ImgURL[] = new URL[17];
     private static ImageIcon Img[];
     private static ImageIcon Exp[];
 
@@ -86,30 +86,21 @@ public class Imagenes {
      */
     public final static int LateralPuente = 13;
 
-    /**
-     *Imagen de un tipo de obstáculo
-     */
-    public final static int ObsA = 14;
 
     /**
      *Imagen de un tipo de obstáculo
      */
-    public final static int ObsP = 15;
-
-    /**
-     *Imagen de un tipo de obstáculo
-     */
-    public final static int ObsT = 16;
+    public final static int ObsP = 14;
 
     /**
      *Imagen Para los de obstáculo Grandes
      */
-    public final static int SeaStone = 17;
+    public final static int SeaStone = 15;
 
     /**
      *Imagen para el fondo de los indicadores
      */
-    public final static int FondoInd = 18;
+    public final static int FondoInd = 16;
 
     /**
      *Constructor de la Clase
@@ -140,9 +131,7 @@ public class Imagenes {
         ImgURL[LateralPuente] = getClass().getResource("/Img/LateralesPuenteD.png");
         ImgURL[LateralIzq] = getClass().getResource("/Img/LateralIzq.png");
         ImgURL[LateralDer] = getClass().getResource("/Img/LateralDer.png");
-        ImgURL[ObsA] = getClass().getResource("/Img/ObstaculoA.png");
         ImgURL[ObsP] = getClass().getResource("/Img/ObstaculoP.png");
-        ImgURL[ObsT] = getClass().getResource("/Img/ObstaculoT.png");
 
     }
 

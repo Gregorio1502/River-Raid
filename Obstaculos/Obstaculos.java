@@ -94,19 +94,19 @@ public abstract class Obstaculos {
     }
 
     /**
-     * @return el ancho máximo de un objeto a partir de su JLabel mas Ancha
+     * @return el ancho máximo de un obstaculo a partir de su JLabel mas Ancha
      */
     public int getAnchor() {
-        int Anch = 0;
+        int Wid = 0;
         for (int i = 0; i < Obs.length; i++) {
-            if (Obs[i].getWidth() > Ancho) {
-                Anch = Obs[i].getWidth();
+            if (Obs[i].getWidth() > Wid) {
+                Wid = Obs[i].getWidth();
             }
         }
         if (Tipo == 0) {
-        Anch = Ancho;
+        Wid = Ancho;
         }
-        return Anch;
+        return Wid;
     }
 
     /**

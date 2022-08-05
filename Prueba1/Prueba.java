@@ -13,11 +13,11 @@ import javax.swing.Timer;
 
 import Entidades.Avion;
 import Entidades.Balas;
+import Escenario.Escenarios;
+import Escenario.Fuel_Indicador;
+import Escenario.MapaT1;
 import Misc.Imagenes;
 import Misc.Sound;
-import escenario.Escenarios;
-import escenario.Fuel_Indicador;
-import escenario.MapaT1;
 
 /**
  * Clase central para el juego, Aquí se juntan la gran mayoría de las clases
@@ -111,10 +111,10 @@ public class Prueba extends JPanel {
         PuntosLabel = new JLabel("Punto: " + Puntos);
 
         add(Jugador.getCuerpo());
-        Jugador.setVidas(3);
+        Jugador.setVidas(2);
 
         Vidas = new JLabel();
-        Vidas.setText(": " + Jugador.getVidas());
+        Vidas.setText(": " + (1+Jugador.getVidas()));
 
         Ventana.sound.play(Sound.SoundFondo);
 
@@ -304,7 +304,7 @@ public class Prueba extends JPanel {
                             (int) (Esc.getX() + Esc.getWidth() / 2 - Jugador.getCuerpo().getWidth() * 0.5),
                             300);
                     Jugador.setVidas(Jugador.getVidas() - 1);
-                    Vidas.setText(": " + Jugador.getVidas());
+                    Vidas.setText(": " + (1+Jugador.getVidas()));
                     Jugador.getCuerpo().setIcon(Imagenes.getImg()[Imagenes.ImgAvion]);
                     Jugador.setFuel(100);
                     Jugador.setMoverse(true);

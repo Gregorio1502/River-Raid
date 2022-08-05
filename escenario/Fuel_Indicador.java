@@ -1,4 +1,4 @@
-package escenario;
+package Escenario;
 
 import java.awt.Color;
 /**

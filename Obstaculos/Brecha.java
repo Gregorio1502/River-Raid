@@ -6,14 +6,17 @@ import Misc.Imagenes;
 
 /**
  * Obstáculo en forma oblicuo
+ * 
  * @author Gregorio y Francisco
  */
 public class Brecha extends Obstaculos {
 
     /**
      * Construtor de la clase
-     * @param Ancho Limite de que tan ancho puede ser
-     * @param Altura EL punto en y a partir de donde se empieza a generar el obstáculo
+     * 
+     * @param Ancho  Limite de que tan ancho puede ser
+     * @param Altura EL punto en y a partir de donde se empieza a generar el
+     *               obstáculo
      */
     public Brecha(int Ancho, int Altura) {
         super(Ancho, Altura);
@@ -88,4 +91,18 @@ public class Brecha extends Obstaculos {
         }
     }
 
+    /*
+     * (non-Javadoc)
+     * Sobre escribe la altura total para adaptarse a dos laterales ocupados
+     * 
+     * @see Obstaculos.Obstaculos#getAlturaT()
+     */
+    @Override
+    public int getAlturaT() {
+        if (Tipo == 0) {
+            return super.getAlturaT() / 2;
+        } else {
+            return super.getAlturaT();
+        }
+    }
 }

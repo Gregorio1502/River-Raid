@@ -6,14 +6,17 @@ import Misc.Imagenes;
 
 /**
  * Obstáculo de forma cerrada y corta
+ * 
  * @author Gregorio y Francisco
  */
 public class Embudo extends Obstaculos {
 
     /**
      * Constructor de la clase
+     * 
      * @param Ancho Limite de que tan ancho puede ser
-     * @param largo EL punto en y a partir de donde se empieza a generar el obstáculo
+     * @param largo EL punto en y a partir de donde se empieza a generar el
+     *              obstáculo
      */
     public Embudo(int Ancho, int largo) {
         super(Ancho, largo);
@@ -51,4 +54,14 @@ public class Embudo extends Obstaculos {
         }
     }
 
+    /*
+     * (non-Javadoc)
+     * Sobre escribe la altura total para adaptarse a dos laterales ocupados
+     * 
+     * @see Obstaculos.Obstaculos#getAlturaT()
+     */
+    @Override
+    public int getAlturaT() {
+        return super.getAlturaT() / 2;
+    }
 }

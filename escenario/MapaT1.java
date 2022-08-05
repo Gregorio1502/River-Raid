@@ -1,10 +1,8 @@
-package escenario;
+package Escenario;
 
 import Entidades.*;
 import Obstaculos.*;
 import java.awt.*;
-
-;
 
 /**
  * Clase para implementar los elementos del juego Hereda de Escenarios
@@ -30,7 +28,7 @@ public class MapaT1 extends Escenarios {
     /**
      * Función donde se invocan las demás funciones
      *
-     * @see escenario.Escenarios#IniciarComponents()
+     * @see Escenario.Escenarios#IniciarComponents()
      */
     @Override
     public void IniciarComponents() {
@@ -97,8 +95,8 @@ public class MapaT1 extends Escenarios {
             int T = Rd.nextInt(3);
             int Cambio = 10;
             int intento = 0;
-            Rectangle A;
-            Rectangle B;
+            Rectangle A = null;
+            Rectangle B = null;
             do {
                 if (intento > Cambio) {
                     T = Rd.nextInt(3);
@@ -130,16 +128,15 @@ public class MapaT1 extends Escenarios {
                     } else {
                         A.setLocation(0, Obstaculos[j].getPAltura());
                     }
-                    A.grow(60, 60);
+                    A.grow(50, 50);
                     for (int i = 0; i < j && !Colision; i++) {
                         B = new Rectangle(Obstaculos[i].getAnchor(), Obstaculos[i].getAlturaT());
-
                         if (Obstaculos[i].getTipo() == 2) {
                             A.setLocation(getWidth() - Obstaculos[i].getAnchor(), Obstaculos[i].getPAltura());
                         } else {
                             A.setLocation(0, Obstaculos[i].getPAltura());
                         }
-                        B.grow(60, 60);
+                        B.grow(50, 50);
                         if (A.intersects(B)) {
                             Colision = true;
                             intento++;
@@ -193,7 +190,7 @@ public class MapaT1 extends Escenarios {
     /**
      * Funcion para posicionar los objetos y enemigos
      *
-     * @see escenario.Escenarios#Posicionar()
+     * @see Escenario.Escenarios#Posicionar()
      */
     @Override
     public void Posicionar() {

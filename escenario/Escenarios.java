@@ -1,4 +1,4 @@
-package escenario;
+package Escenario;
 
 import javax.swing.JPanel;
 import java.util.Random;
